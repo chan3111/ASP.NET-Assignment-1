@@ -1,0 +1,15 @@
+﻿@model Assignment1.Models.Comment
+
+<form asp-controller="Home" asp-action="CreateComment">
+    <input type="hidden" name="BlogPostId" asp-for="BlogPostId" value="@ViewData["BlogPostId"]" />
+    <table>
+        <tbody>
+            <tr>
+                <td><textarea rows="3" cols="90" name="Content" asp-for="Content" placeholder="Enter a comment..."></textarea></td>
+            </tr>
+            <tr>
+                <td><input class="btn" type="submit" value="Post" /></td>
+            </tr>
+        </tbody>
+    </table>
+</form>
